@@ -2,14 +2,10 @@ import PlaySong from './PlaySong'
 
 const GamePage = () => {
     return (
-        <div className="app-background">
-            <PlaySong src={'/music/bgm/opening.mp3'} loop={true} />
-            <h1 className="game-title">east sea</h1>
-            <div className="select-box-group">
-                <button className="select-box">START</button>
-                <button className="select-box">SAVED</button>
-                <button className="select-box">EXIT</button>
-            </div>
+        <div>
+            {/* 5초에 걸쳐 음악이 서서히 커진다. 5초가 지나면 볼륨 100%로 재생 */}
+            <PlaySong src={'/music/bgm/in_office.mp3'} loop={true} fadeIn={5000}/>
+            게임씬
         </div>
     )
 }
