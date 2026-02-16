@@ -1,7 +1,9 @@
 const useSoundEffect = (src: string) => {
-    const hoverSound = new Audio(src);
-    hoverSound.currentTime = 0;
-    hoverSound.play();
+    return () => {
+        const sound = new Audio(src);
+        sound.currentTime = 0;
+        sound.play();
+    }
 }
 
 export default useSoundEffect;
